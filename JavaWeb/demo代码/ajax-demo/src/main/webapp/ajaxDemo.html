@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+  <script>
+
+
+    //1.创建核心对象xmlHttpRequest,用于和服务请交互数据
+      var xmlhttp;
+      if (window.XMLHttpRequest)
+      {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+      }
+      else
+      {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+
+    //2.发送请求
+      xmlhttp.open("GET","http://localhost:8080/ajax-demo/ajaxServlet");
+      xmlhttp.send();
+
+
+    //3.获取服务器响应数据
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+        alert(this.responseText);
+      }
+    }
+
+
+  </script>
+</body>
+</html>

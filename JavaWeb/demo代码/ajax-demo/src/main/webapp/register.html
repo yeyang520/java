@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+  <form action="/new-register-demo/registerServlet" >
+    <h1 >Register</h1>
+
+    <p style="display: none" id="username_err">用户名或密码错误</p>
+    <p>Username: <input type="text" name="username" id="username"> </p>
+    <p>password: <input type="password" name="password"> </p>
+
+<!--    <p>验证码：-->
+<!--      <input type="text" name="checkCode">-->
+<!--      <img src="/new-register-demo/checkCodeServlet" alt="#" id="changeCode">-->
+<!--      <a href="#" id="changeCodeImage">看不清</a>-->
+<!--    </p>-->
+
+    <div>
+      <input type="submit" value="login up">
+      <input type="reset" value="reset">
+    </div>
+  </form>
+</div>
+  <script>
+    document.getElementById("username").onblur = function () {
+      //发送ajax请求
+      var username = this.value;
+
+
+
+      //1.创建核心对象xmlHttpRequest,用于和服务请交互数据
+      var xmlhttp;
+      if (window.XMLHttpRequest)
+      {
+              //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+      }
+      else
+      {
+              // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+
+      //2.发送请求
+      xmlhttp.open("GET","http://localhost:8080/ajax-demo/selectUserServlet?username="+username);
+      xmlhttp.send();
+
+
+      //3.获取服务器响应数据
+      xmlhttp.onreadystatechange=function()
+      {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          //判断
+          if(this.responseText == "true"){
+              //用户存在
+              document.getElementById("username_err").style.display = '';
+          } else {
+              //不存在,清除错误信息
+            document.getElementById("username_err").style.display = 'none';
+          }
+        }
+      }
+
+
+
+    }
+  </script>
+</body>
+</html>

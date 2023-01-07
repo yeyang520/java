@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="addBrand.html">添加</a>
+<hr>
+<div id="app">
+<table border="1" cellpadding="0" width="80%" id="brandTable">
+    <tr>
+        <th>序号</th>
+        <th>品牌名称</th>
+        <th>企业名称</th>
+        <th>排序</th>
+        <th>品牌</th>
+        <th>状态</th>
+        <th>操作</th>
+    </tr>
+<!--    使用v-for完成遍历-->
+    <tr v-for="(brand,i) in brands">
+        <td>{{i+1}}</td>
+        <td>{{brand.brandName}}</td>
+        <td>{{brand.comopanyName}}</td>
+        <td>{{brand.ordered}}</td>
+        <td>{{brand.description}}</td>
+        <td>{{brand.status}}</td>
+        <td> <a href="#">修改</a><a href="#">删除</a></td>
+    </tr>
+
+</table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+
+
+
+    new Vue({
+        el:"#app",
+        data(){
+          return({
+              brands:[]
+          })
+        },
+        mounted(){
+            //借助跳板来提升作用域
+            var _this = this
+            //页面加载完成后发送异步请求查询数据
+            axios({
+                method:"get",
+                url:"http://localhost:8080/new-brand-demo/selectAllServlet"
+            }).then(function (resp){
+                //此时的this是windows对象，因为请求是windows发出的
+                _this.brands = resp.data
+            })
+        }
+    })
+
+
+/*
+  //1.当前页面加载完成后，发送ajax请求
+  window.onload = function () {
+    //2.发送请求
+    axios({
+      method:"get",
+      url:"http://localhost:8080/new-brand-demo/selectAllServlet"
+    }).then(function (resp) {
+      //3.回调函数得到数据
+      let brands = resp.data
+      let tableData = "<tr>\n" +
+              "    <th>序号</th>\n" +
+              "    <th>品牌名称</th>\n" +
+              "    <th>企业名称</th>\n" +
+              "    <th>排序</th>\n" +
+              "    <th>品牌</th>\n" +
+              "    <th>状态</th>\n" +
+              "    <th>操作</th>\n" +
+              "  </tr>"
+
+
+      for(let i=0;i<brands.length;++i){
+        let brand = brands[i];
+        tableData+="\n" +
+                "    <tr>\n" +
+                "      <td>"+brand.id+"</td>\n" +
+                "      <td>"+brand.brandName+"</td>\n" +
+                "      <td>"+brand.companyName+"</td>\n" +
+                "      <td>"+brand.ordered+"</td>\n" +
+                "      <td>"+brand.description+"</td>\n" +
+                "      <td>"+brand.status+"</td>\n" +
+                "<td> <a href=\"#\">修改</a><a href=\"#\">删除</a></td>" +
+                "    </tr>"
+      }
+      document.getElementById("brandTable").innerHTML = tableData;
+    })
+
+
+  }*/
+
+</script>
+</body>
+</html>

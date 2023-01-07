@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:16:10 +0800] "GET /new-brand-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:16:10 +0800] "GET /new-brand-demo/ HTTP/1.1" 200 57 http-bio-8080-exec-3 31
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:16:10 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:16:14 +0800] "GET /new-brand-demo/brand.html HTTP/1.1" 200 2995 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:16:15 +0800] "GET /new-brand-demo/selectAllServlet HTTP/1.1" 200 1279 http-bio-8080-exec-6 484
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:27:21 +0800] "GET /new-brand-demo/addBrand.html HTTP/1.1" 200 3226 http-bio-8080-exec-8 5
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:28:20 +0800] "GET /new-brand-demo/addBrand.html HTTP/1.1" 200 3228 http-bio-8080-exec-10 2
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:31:25 +0800] "GET /new-brand-demo/addBrand.html HTTP/1.1" 200 3234 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:31:44 +0800] "POST /new-brand-demo/addServlet HTTP/1.1" 200 7 http-bio-8080-exec-3 25
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:31:44 +0800] "GET /new-brand-demo/brand.html HTTP/1.1" 304 - http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [04/Jan/2023:10:31:44 +0800] "GET /new-brand-demo/selectAllServlet HTTP/1.1" 200 1383 http-bio-8080-exec-3 5

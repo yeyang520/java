@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<h3>添加品牌</h3>
+<form action="" method="post">
+  品牌名称: <input name="brandName" id="brandName" v-model="brand.brandName"><br>
+  企业名称： <input name="companyName" id="companyName" v-model="brand.companyName"><br>
+  排序： <input name="ordered" id="ordered" v-model="brand.ordered"><br>
+  描述信息：<textarea name="description" cols="20" rows="5" id="description" v-model="brand.description"></textarea><br>
+  状态：
+  <input type="radio" name="status" value="0" v-model="brand.status">禁用
+  <input type="radio" name="status" value="1" v-model="brand.status" >启用 <br>
+
+  <input id="btn" type="button" value="提交" v-on:click="submitForm">
+
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+
+    new Vue({
+        el:"#app",
+        data(){
+            brand:{}
+        },
+        methods:{
+            submitForm(){
+                var _this = this
+                //发送ajax请求
+                axios({
+                    method:"post",
+                    url:"http://localhost:8080/new-brand-demo/addServlet",
+                    //data格式是js对象，ajax会自动将js对象转换为json字符串
+                    data:_this.brand
+                }).then(function (resp){
+                    //判断响应数据
+                    if(resp.data == "success"){
+                        location.href = "http://localhost:8080/new-brand-demo/brand.html"
+                    }
+                })
+            }
+        }
+    })
+
+
+
+
+    /*
+  //1.给按钮绑定时间
+  document.getElementById("btn").onclick = function () {
+      //处理表单数据
+      var formData = {
+          brandName: "",
+          companyName: "",
+          ordered: "",
+          description: "",
+          status: "",
+      };
+      //设置表单数据
+      let brandName = document.getElementById("brandName").value;
+      formData.brandName = brandName
+      let companyName = document.getElementById("companyName").value;
+      formData.companyName = companyName
+      let ordered = document.getElementById("ordered").value;
+      formData.ordered = ordered
+      let description = document.getElementById("description").value;
+      formData.description = description
+      let status = document.getElementsByClassName("status");
+      for(var i=0;i<status.length;++i){
+          if(status[i].checked){
+              formData.status = status[i].value
+          }
+      }
+
+      console.log(formData)
+
+    //2.发送ajax请求 post
+    axios({
+      method:"post",
+      url:"http://localhost:8080/new-brand-demo/addServlet",
+      //data格式是js对象，ajax会自动将js对象转换为json字符串
+      data:formData
+    }).then(function (resp){
+        //判断响应数据
+        if(resp.data == "success"){
+            location.href = "http://localhost:8080/new-brand-demo/brand.html"
+        }
+    })
+
+  }*/
+
+
+
+</script>
+
+</body>
+</html>
