@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80985cad-e32d-4232-a4c4-43ec21cfa38c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../download/maven/apache-maven-3.8.6" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\download\maven\apache-maven-3.8.6\conf\toolchains.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2KOyq1pBd1HdNiN7LWYONYjY2Yu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "D:/working/Java/SSM/coding/maven_04_dao",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "045b32fd004eaea66da9fc4e8cd334fd",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\working\Java\SSM\coding\springmvc_08_result\src\main\webapp" />
+      <recent name="D:\working\Java\SSM\coding\springmvc_07_ssm\src\main\java\boy\learning" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="boy.learning.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BookServiceTest.testGetById">
+    <configuration name="BookServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maven_02_ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boy.learning.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="boy.learning.service" />
+      <option name="MAIN_CLASS_NAME" value="boy.learning.service.BookServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceTest.testGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maven_02_ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boy.learning.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="boy.learning.service" />
+      <option name="MAIN_CLASS_NAME" value="boy.learning.service.BookServiceTest" />
+      <option name="METHOD_NAME" value="testGetById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookServiceTest.testGetById" />
+        <item itemvalue="JUnit.BookServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80985cad-e32d-4232-a4c4-43ec21cfa38c" name="Changes" comment="" />
+      <created>1673860111831</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673860111831</updated>
+      <workItem from="1673860113749" duration="5864000" />
+      <workItem from="1673873329290" duration="1598000" />
+      <workItem from="1673875090513" duration="2912000" />
+      <workItem from="1673878015178" duration="1237000" />
+      <workItem from="1673914139763" duration="603000" />
+      <workItem from="1673916580482" duration="8708000" />
+      <workItem from="1673958637239" duration="2701000" />
+      <workItem from="1674004928990" duration="96000" />
+      <workItem from="1674009392779" duration="2861000" />
+      <workItem from="1674025016958" duration="1130000" />
+      <workItem from="1674026273144" duration="17000" />
+      <workItem from="1674026346882" duration="85000" />
+      <workItem from="1674026468344" duration="32000" />
+      <workItem from="1674026766552" duration="317000" />
+      <workItem from="1674027090982" duration="210000" />
+      <workItem from="1674027308242" duration="85000" />
+      <workItem from="1674027401732" duration="25000" />
+      <workItem from="1674027438967" duration="5000" />
+      <workItem from="1674027480968" duration="8610000" />
+      <workItem from="1674213030549" duration="1824000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

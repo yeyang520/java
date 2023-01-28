@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: boy.learning.Springboot01QuickstartApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.358 s - in boy.learning.Springboot01QuickstartApplicationTests

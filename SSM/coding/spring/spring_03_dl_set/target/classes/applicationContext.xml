@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    配置bean-->
+
+<!--    <bean id="bookDao" class="boy.learning.dao.impl.BookDaoImpl">-->
+<!--        <property name="connectionNum" value="100"/>-->
+<!--        <property name="dataBase" value="mysql"/>-->
+<!--    </bean>-->
+
+
+<!--    使用构造器-->
+
+<!--    <bean id="bookDao" class="boy.learning.dao.impl.BookDaoImpl">-->
+<!--        <constructor-arg name="connectionNum" value="1"/>-->
+<!--        <constructor-arg name="dataBase" value="mysql"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="bookDao" class="boy.learning.dao.impl.BookDaoImpl">-->
+<!--        <constructor-arg type="int" value="1"/>-->
+<!--        <constructor-arg type="java.lang.String" value="mysql"/>-->
+<!--    </bean>-->
+
+
+    <bean id="bookDao" class="boy.learning.dao.impl.BookDaoImpl">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="mysql"/>
+    </bean>
+
+
+
+
+    <bean id="userDao" class="boy.learning.dao.impl.UserDaoImpl"/>
+
+
+    <bean id="bookService" class="boy.learning.service.impl.BookServiceImpl">
+<!--        name是形参的名字-->
+        <constructor-arg name="bookDao" ref="bookDao"/>
+        <constructor-arg name="userDao" ref="userDao"/>
+    </bean>
+
+
+
+
+
+
+<!--    方式二：-->
+<!--    <bean id="bookDao" class="boy.learning.factory.BookDaoFactory" factory-method="getBookDao"/>-->
+
+
+<!--    方式三实例化工厂-->
+<!--    先创建工厂bean-->
+<!--    <bean id="userFactory" class="boy.learning.factory.UserDaoFactory"/>-->
+<!--    配置bean，factory-bean是工厂方法，factory-bean要实例化的工厂 -->
+<!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>-->
+
+
+
+<!--    方式四：使用FactoruBean方法-->
+<!--    <bean id="userDao" class="boy.learning.factory.UserDaoFactoryBean"/>-->
+</beans>

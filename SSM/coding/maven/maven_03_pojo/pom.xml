@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>boy.learning</groupId>
+  <artifactId>maven_03_pojo</artifactId>
+  <version>1.0-RELEASE</version>
+
+
+  <!--  配置当前工程继承自parent工程-->
+  <parent>
+    <groupId>boy.learning</groupId>
+    <artifactId>maven_01_parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+<!--    编写父工程的pom类-->
+    <relativePath>../maven_01_parent/pom.xml</relativePath>
+  </parent>
+
+
+</project>

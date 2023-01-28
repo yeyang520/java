@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    配置bean-->
+<!--    bean标签表示配置bean ，id 起名字 ，class表示给bean定义类型-->
+    <bean id="bookDao" name="service service2 service3" class="boy.learning.dao.impl.BookDaoImpl" scope="prototype"/>
+
+    <bean id="bookService" class="boy.learning.service.impl.BookServiceImpl">
+<!--        7.配置service与dao关系-->
+<!--        property标签表示配置当前属性，
+            第一个bookDao表示具体配置哪一个属性
+            第二个表示参照哪一个bean
+-->
+        <property name="bookDao" ref="bookDao" />
+    </bean>
+
+
+
+
+<!--    方式二：-->
+<!--    <bean id="bookDao" class="boy.learning.factory.BookDaoFactory" factory-method="getBookDao"/>-->
+
+
+<!--    方式三实例化工厂-->
+<!--    先创建工厂bean-->
+<!--    <bean id="userFactory" class="boy.learning.factory.UserDaoFactory"/>-->
+<!--    配置bean，factory-bean是工厂方法，factory-bean要实例化的工厂 -->
+<!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>-->
+
+
+
+<!--    方式四：使用FactoruBean方法-->
+    <bean id="userDao" class="boy.learning.factory.UserDaoFactoryBean"/>
+</beans>

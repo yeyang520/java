@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    配置bean-->
+<!--    bean标签表示配置bean ，id 起名字 ，class表示给bean定义类型-->
+    <bean  class="boy.learning.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
+
+    <bean id="bookService" class="boy.learning.service.impl.BookServiceImpl" autowire="byType"/>
+
+
+
+
+<!--    <bean class="boy.learning.factory.UserDaoFactoryBean"/>-->
+</beans>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 引入element-ui样式 -->
+<link rel="stylesheet" href="plugins/elementui/index.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<body>
+    <div id="app">
+
+        <h3>element-ui</h3>
+        <el-row>
+            <el-button>默认按钮</el-button>
+            <el-button type="primary">主要按钮</el-button>
+            <el-button type="success">成功按钮</el-button>
+            <el-button type="info">信息按钮</el-button>
+            <el-button type="warning">警告按钮</el-button>
+            <el-button type="danger">危险按钮</el-button>
+          </el-row>
+          
+          <el-row>
+            <el-button plain>朴素按钮</el-button>
+            <el-button type="primary" plain>主要按钮</el-button>
+            <el-button type="success" plain>成功按钮</el-button>
+            <el-button type="info" plain>信息按钮</el-button>
+            <el-button type="warning" plain>警告按钮</el-button>
+            <el-button type="danger" plain>危险按钮</el-button>
+          </el-row>
+
+          <h3>vue</h3>
+          <input type="text" v-model="username">
+          {{username}}
+
+          <h3>axios</h3>
+          <div id="axios"></div>
+    </div>
+
+
+    
+</body>
+<!-- 引入axios -->
+<script src="js/axios-0.18.0.js"></script>
+<!-- 引入vue -->
+<script src="js/vue.js"></script>
+<!-- 引入element-ui组件库 -->
+<script src="plugins/elementui/index.js"></script>
+
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            username:'请修改我',
+            formdata:{}
+        },
+        methods:{
+            testAxios(){
+                axios.get("http://localhost/books/3").then((res)=>{
+                var div = document.getElementById('axios');
+                this.formdata = res.data.data
+                div.innerText = this.formdata.type
+                console.log(this.formdata)
+            })
+            }
+        },
+        mounted(){
+            this.testAxios();
+        }
+    })
+</script>
+
+
+</html>

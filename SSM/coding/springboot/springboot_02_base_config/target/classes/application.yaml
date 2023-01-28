@@ -1,0 +1,13 @@
+server:
+  port: 81
+
+logging:
+  level:
+    root: info
+
+enterprise:
+  likes:
+    - 1
+    - 2
+    - 3
+    - 4
